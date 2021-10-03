@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+    
+
+{% block body_block %}
+
+<style type="text/css">
+	table{
+		margin-top: 40px;
+
+	}
+</style>
+
+<div class="container">
+
+<table class="table table-primary table-striped table-hover">
+   <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Customer ID</th>
+      <th scope="col">Age</th>
+      <th scope="col">Profession</th>
+      <th scope="col">Spending score</th>
+      <th scope="col">Segmentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>456782</td>
+      <td>23</td>
+      <td>Engineer</td>
+      <td>High</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>435678</td>
+      <td>45</td>
+      <td>Doctor</td>
+      <td>Medium</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>345673</td>
+      <td>18</td>
+      <td>Artist</td>
+      <td>Low</td>
+      <td>D</td>
+
+      
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+{% endblock %}

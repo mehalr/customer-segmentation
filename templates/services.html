@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+    
+
+{% block body_block %}
+
+<style type="text/css">
+	.banner{
+
+    padding-top: 4%;
+    left: 150px;
+
+}
+</style>
+<div class="banner" style="display: flex;">
+		<div class="app-picture">
+             <img src="{% static 'images/picture.jpg' %}">
+         </div>
+
+         <div class="container" style="padding-right: 40px;">
+            <form class="row g-3">
+				  <div class="col-md-6">
+				    <label for="customerid" class="form-label">Customer ID</label>
+				    <input type="number" class="form-control" id="customerid" name="customerid">
+				  </div>
+				  <div class="col-md-6">
+				    <label for="gender" class="form-label">Gender</label>
+				    <select id="gender" class="form-select" name="gender">
+				      <option value="male" selected>Male</option>
+				      <option value="female">Female</option>
+				    </select>
+				  </div>
+
+				  <div class="col-md-6">
+				    <label for="age" class="form-label">Age</label>
+				    <input type="number" class="form-control" id="age" name="age">
+				  </div>
+				  <div class="col-md-4">
+				    <label for="married" class="form-label">Married</label>
+				    <select id="married" class="form-select" name="married">
+				      <option selected>Choose...</option>
+				      <option value="yes">Yes</option>
+				      <option value="no">No</option>
+				    </select>
+				  </div>
+				  <div class="col-md-2">
+				    <label for="graduated" class="form-label">Graduated</label>
+				    <select id="graduated" class="form-select" name="graduated">
+				      <option selected>Choose...</option>
+				      <option value="yes">Yes</option>
+				      <option value="no">No</option>
+				    </select>
+				  </div>
+				  <div class="col-12">
+				    <label for="profession" class="form-label">Profession</label>
+				     <select id="profession" class="form-select" name="profession">
+				      <option selected value="Healthcare">Healthcare</option>
+				      <option value="Engineer">Engineer</option>
+				      <option value="Lawyer">Lawyer</option>
+				      <option value="Entertainment">Entertainment</option>
+				      <option value="Artist">Artist</option>
+				      <option value="Executive">Executive</option>
+				      <option value="Doctor">Doctor</option>
+				      <option value="Homemaker">Homemaker</option>
+				      <option value="Marketing">Marketing</option>
+
+
+				    </select>
+				  </div>
+				  <div class="col-md-4">
+				    <label for="inputCity" class="form-label">Work Experience</label>
+				    <input type="number" class="form-control" id="inputCity">
+				  </div>
+				  <div class="col-md-4">
+				    <label for="spending" class="form-label">Spending</label>
+				    <select id="spending" class="form-select" name="spending">
+				      <option selected value="low">Low</option>
+				      <option value="medium">Medium</option>
+				      <option value="high">High</option>
+				    </select>
+				  </div>
+				  <div class="col-md-4">
+				    <label for="familysize" class="form-label">Family Size</label>
+				    <input type="number" class="form-control" id="familysize" name="familysize">
+				  </div>
+				  <div class="col-12">
+				    <div class="form-check">
+				      <input class="form-check-input" type="checkbox" id="gridCheck">
+				      <label class="form-check-label" for="gridCheck">
+				        Check me out
+				      </label>
+				    </div>
+				  </div>
+				  <div class="col-12">
+				    <button type="submit" class="btn btn-warning">Submit Info</button>
+				  </div>
+			</form>
+         </div>
+         
+    </div> 
+
+
+{% endblock%}

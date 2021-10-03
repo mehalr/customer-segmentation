@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+    
+
+{% block body_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+
+
+	<div class="header">
+
+     <div class="banner" style="display: flex;">
+         <div class="app-text">
+             <h3>Marketing strategies</h3>
+             <h1>Customer<br>Segmentation</h1>
+             <p>Customer segmentation is the practice of dividing a company's customers into groups that reflect similarity among customers in each group.</p>
+
+             <div class="btn-group">
+                 <div class="signup-btn">Learn more</div>
+                 <div class="play-btn">
+                     <div class="play-btn-inner">
+                         <i class="fa fa-play"></i>
+                     </div>
+                     <span>How it works</span>
+                 </div>
+             </div>
+         </div>
+         <div class="app-picture">
+             <img src="{% static 'images/pict.jpg' %}">
+         </div>
+     </div>
+
+     <div class="about-services">
+         <ul>
+             <li>
+                 <img src="{% static 'images/1.png' %}">
+                 <h1>SEO Consultancy</h1>
+                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+             </li>
+             <li>
+                 <img src="{% static 'images/2.png' %}">
+                 <h1>Competitor Analysis</h1>
+                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+             </li>
+             <li>
+                 <img src="{% static 'images/3.png' %}">
+                 <h1>Social Media Marketing</h1>
+                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+             </li>
+         </ul>
+     </div>
+
+     <div class="social-icons">
+         <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+         </ul>
+     </div>
+    </div>
+
+{% endblock %}

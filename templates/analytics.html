@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+    
+
+{% block body_block %}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="container">
+	  <div class="row" style="padding-top: 50px;">
+    <div class="col-6 col-md-4">
+    	<h3>Segmentation</h3>
+    	 <canvas id="pieChart" height="400px"></canvas>
+    </div>
+    <div class="col-6 col-md-4">
+    	<h3>Spending score</h3>
+    	 <canvas id="barChart" height="300px"></canvas>
+    </div>
+    
+    <div class="col-6 col-md-4">
+    	<h3>Profession of customers</h3>
+    	 <canvas id="lineChart" height="300px"></canvas>
+    </div>
+  </div>
+	
+</div>
+
+<script>
+
+  var ctx = document.getElementById("pieChart").getContext("2d");
+  var myChart = new Chart(ctx, {
+  	type: 'doughnut',
+  	data: {
+  		   labels: [
+					    'A',
+					    'B',
+					    'C',
+					    'D',
+
+					  ],
+  		   
+        
+                datasets: [{
+                	label: 'Segmentation',
+                    
+                     data: [200, 50, 100,60],
+                    backgroundColor: [
+                        'rgba(255, 99, 132)', 
+                        'rgba(54, 162, 235)',
+                        'rgba(255, 206, 86)',
+                        '#CB2EB9'
+                        
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        '#CB2EB9'
+                       
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+});
+
+var ctx2 = document.getElementById("barChart").getContext("2d");
+  var myChart = new Chart(ctx2, {
+  	type: 'bar',
+  	data: {
+  		   labels: [
+					    'Low',
+					    'Medium',
+					    'High',
+
+					  ],
+  		   
+        
+                datasets: [{
+                	label: 'Score',
+                    
+                     data: [200, 50, 100],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)', 
+                        'rgba(54, 162, 235 ,0.2)',
+                        'rgba(255, 206, 86 ,0.2)',
+                        
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                       
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+});
+
+var ctx3 = document.getElementById("lineChart").getContext("2d");
+  var myChart = new Chart(ctx3, {
+  	type: 'line',
+  	data: {
+  		   labels: [
+					    'Healthcare',
+					    'Lawyer',
+					    'Engineer',
+					    'Artist',
+					    'Homemaker'
+
+					  ],
+  		   
+        
+                datasets: [{
+                	label: 'Profession',
+                    
+                     data: [100, 50, 80, 120 ,200],
+               
+                    borderColor: 'rgb(75, 192, 192)',
+                    fill: false,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+});
+ 
+
+</script>
+
+{% endblock %}
