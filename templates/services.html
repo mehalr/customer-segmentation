@@ -17,7 +17,6 @@
 	<div class="app-picture">
 		<img src="{% static 'images/picture.jpg' %}">
 	</div>
-
 	<div class="container" style="padding-right: 40px;">
 		<form class="row g-3" method="post">
 			{% csrf_token %}
@@ -64,50 +63,53 @@
 					<option value="Profession_8">Marketing</option>
 				</select>
 			</div>
+           
+         <div class="col-6">
+				    <label for="profession" class="form-label">Category</label>
+				     <select id="profession" class="form-select" name="category">
+				      <option selected value="var_1">1</option>
+				      <option value="var_2">2</option>
+				      <option value="var_3">3</option>
+				      <option value="var_4">4</option>
+				      <option value="var_5">5</option>
+				      <option value="var_6">6</option>
+				      <option value="var_7">7</option>
+				      <option value="var_8">8</option>
+				    
 
-			<div class="col-6">
-				<label for="profession" class="form-label">Category</label>
-				<select id="category" class="form-select" name="category">
-					<option selected value="Var_1_0">1</option>
-					<option value="Var_1_1">2</option>
-					<option value="Var_1_2">3</option>
-					<option value="Var_1_3">4</option>
-					<option value="Var_1_4">5</option>
-					<option value="Var_1_5">6</option>
-					<option value="Var_1_6">7</option>
-					<option value="Var_1_7">8</option>
-				</select>
-			</div>
-			<div class="col-md-4">
-				<label for="inputCity" class="form-label">Work Experience</label>
-				<input type="number" class="form-control" id="inputCity" name="Work_Experience">
-			</div>
-			<div class="col-md-4">
-				<label for="spending" class="form-label">Spending</label>
-				<select id="spending" class="form-select" name="spending">
-					<option selected value="Spending_Score_2">Low</option>
-					<option value="Spending_Score_0">Average</option>
-					<option value="Spending_Score_1">High</option>
-				</select>
-			</div>
-			<div class="col-md-4">
-				<label for="familysize" class="form-label">Family Size</label>
-				<input type="number" class="form-control" id="familysize" name="Family_Size">
-			</div>
-			<div class="col-12">
-				<div class="form-check">
-					<input class="form-check-input" type="checkbox" id="gridCheck">
-					<label class="form-check-label" for="gridCheck">
-						Check me out
-					</label>
-				</div>
-			</div>
-			<div class="col-12">
-				<button type="submit" class="btn btn-warning">Submit Info</button>
-			</div>
-		</form>
-	</div>
 
+				    </select>
+				  </div>
+				  <div class="col-md-4">
+				    <label for="inputCity" class="form-label">Work Experience</label>
+				    <input type="number" class="form-control" id="inputCity">
+				  </div>
+				  <div class="col-md-4">
+				    <label for="spending" class="form-label">Spending</label>
+				    <select id="spending" class="form-select" name="spending">
+				      <option selected value="low">Low</option>
+				      <option value="medium">Medium</option>
+				      <option value="high">High</option>
+				    </select>
+				  </div>
+				  <div class="col-md-4">
+				    <label for="familysize" class="form-label">Family Size</label>
+				    <input type="number" class="form-control" id="familysize" name="familysize">
+				  </div>
+				  <div class="col-12">
+				    <div class="form-check">
+				      <input class="form-check-input" type="checkbox" id="gridCheck">
+				      <label class="form-check-label" for="gridCheck">
+				        Check me out
+				      </label>
+				    </div>
+				  </div>
+				  <div class="col-12">
+				    <button type="submit" class="btn btn-warning">Submit Info</button>
+				  </div>
+			</form>
+         </div>
+         
 </div>
 
 
