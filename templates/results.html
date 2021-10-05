@@ -26,32 +26,16 @@
     </tr>
   </thead>
   <tbody>
+  {% for i in data %}
     <tr>
-      <th scope="row">1</th>
-      <td>456782</td>
-      <td>23</td>
-      <td>Engineer</td>
-      <td>High</td>
-      <td>B</td>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ i.customer_id }}</td>
+      <td>{{ i.age }}</td>
+      <td>{{ i.profession }}</td>
+      <td>{{ i.spending }}</td>
+      <td>{{ i.segment }}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>435678</td>
-      <td>45</td>
-      <td>Doctor</td>
-      <td>Medium</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>345673</td>
-      <td>18</td>
-      <td>Artist</td>
-      <td>Low</td>
-      <td>D</td>
-
-      
-    </tr>
+  {% endfor %}
   </tbody>
 </table>
 
