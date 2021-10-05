@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
 {% load static %}
-    
+
 
 {% block body_block %}
 
 <style type="text/css">
 	.banner{
 
-    padding-top: 4%;
-    left: 150px;
+		padding-top: 4%;
+		left: 150px;
 
-}
+	}
 </style>
 <div class="banner" style="display: flex;">
-		<div class="app-picture">
-             <img src="{% static 'images/picture.jpg' %}">
-         </div>
-
-         <div class="container" style="padding-right: 40px;">
-            <form class="row g-3">
-				  <div class="col-md-6">
-				    <label for="customerid" class="form-label">Customer ID</label>
-				    <input type="number" class="form-control" id="customerid" name="customerid">
-				  </div>
-				  <div class="col-md-6">
-				    <label for="gender" class="form-label">Gender</label>
-				    <select id="gender" class="form-select" name="gender">
-				      <option value="male" selected>Male</option>
-				      <option value="female">Female</option>
-				    </select>
-				  </div>
-
-				  <div class="col-md-6">
-				    <label for="age" class="form-label">Age</label>
-				    <input type="number" class="form-control" id="age" name="age">
-				  </div>
-				  <div class="col-md-4">
-				    <label for="married" class="form-label">Married</label>
-				    <select id="married" class="form-select" name="married">
-				      <option selected>Choose...</option>
-				      <option value="yes">Yes</option>
-				      <option value="no">No</option>
-				    </select>
-				  </div>
-				  <div class="col-md-2">
-				    <label for="graduated" class="form-label">Graduated</label>
-				    <select id="graduated" class="form-select" name="graduated">
-				      <option selected>Choose...</option>
-				      <option value="yes">Yes</option>
-				      <option value="no">No</option>
-				    </select>
-				  </div>
-				  <div class="col-6">
-				    <label for="profession" class="form-label">Profession</label>
-				     <select id="profession" class="form-select" name="profession">
-				      <option selected value="Healthcare">Healthcare</option>
-				      <option value="Engineer">Engineer</option>
-				      <option value="Lawyer">Lawyer</option>
-				      <option value="Entertainment">Entertainment</option>
-				      <option value="Artist">Artist</option>
-				      <option value="Executive">Executive</option>
-				      <option value="Doctor">Doctor</option>
-				      <option value="Homemaker">Homemaker</option>
-				      <option value="Marketing">Marketing</option>
-
-
-				    </select>
-				  </div>
+	<div class="app-picture">
+		<img src="{% static 'images/picture.jpg' %}">
+	</div>
+	<div class="container" style="padding-right: 40px;">
+		<form class="row g-3" method="post">
+			{% csrf_token %}
+			<div class="col-md-6">
+				<label for="customerid" class="form-label">Customer ID</label>
+				<input type="number" class="form-control" id="customerid" name="ID">
+			</div>
+			<div class="col-md-6">
+				<label for="gender" class="form-label">Gender</label>
+				<select id="gender" class="form-select" name="gender">
+					<option value="Gender_1" selected>Male</option>
+					<option value="Gender_0">Female</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<label for="age" class="form-label">Age</label>
+				<input type="number" class="form-control" id="age" name="Age">
+			</div>
+			<div class="col-md-4">
+				<label for="married" class="form-label">Married</label>
+				<select id="married" class="form-select" name="married">
+					<option value="Ever_Married_1">Yes</option>
+					<option value="Ever_Married_0">No</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+				<label for="graduated" class="form-label">Graduated</label>
+				<select id="graduated" class="form-select" name="graduated">
+					<option value="Graduated_1">Yes</option>
+					<option value="Graduated_0">No</option>
+				</select>
+			</div>
+			<div class="col-6">
+				<label for="profession" class="form-label">Profession</label>
+				<select id="profession" class="form-select" name="profession">
+					<option selected value="Profession_5">Healthcare</option>
+					<option value="Profession_2">Engineer</option>
+					<option value="Profession_7">Lawyer</option>
+					<option value="Profession_3">Entertainment</option>
+					<option value="Profession_0">Artist</option>
+					<option value="Profession_4">Executive</option>
+					<option value="Profession_1">Doctor</option>
+					<option value="Profession_6">Homemaker</option>
+					<option value="Profession_8">Marketing</option>
+				</select>
+			</div>
            
-                                   <div class="col-6">
+         <div class="col-6">
 				    <label for="profession" class="form-label">Category</label>
 				     <select id="profession" class="form-select" name="category">
 				      <option selected value="var_1">1</option>
@@ -115,7 +110,7 @@
 			</form>
          </div>
          
-    </div> 
+</div>
 
 
 {% endblock%}
